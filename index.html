@@ -48,28 +48,56 @@
     <style>
         /* work-tree SVG animation */
         @keyframes wt-draw {
-            from { stroke-dashoffset: 350; }
-            to   { stroke-dashoffset: 0; }
+            from {
+                stroke-dashoffset: 350;
+            }
+
+            to {
+                stroke-dashoffset: 0;
+            }
         }
+
         @keyframes wt-pop {
-            0%   { transform: scale(0); opacity: 0; }
-            60%  { transform: scale(1.3); opacity: 1; }
-            100% { transform: scale(1); opacity: 1; }
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            60% {
+                transform: scale(1.3);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
+
         .wt-line {
             stroke-dasharray: 350;
             stroke-dashoffset: 350;
-            animation: wt-draw 1s cubic-bezier(.4,0,.2,1) forwards;
+            animation: wt-draw 1s cubic-bezier(.4, 0, .2, 1) forwards;
         }
+
         .wt-node {
             transform-origin: center;
             transform-box: fill-box;
             opacity: 0;
-            animation: wt-pop .45s cubic-bezier(.34,1.56,.64,1) forwards;
+            animation: wt-pop .45s cubic-bezier(.34, 1.56, .64, 1) forwards;
         }
-        .wt-node:nth-child(1) { animation-delay: .7s; }
-        .wt-node:nth-child(2) { animation-delay: .9s; }
-        .wt-node:nth-child(3) { animation-delay: 1.1s; }
+
+        .wt-node:nth-child(1) {
+            animation-delay: .7s;
+        }
+
+        .wt-node:nth-child(2) {
+            animation-delay: .9s;
+        }
+
+        .wt-node:nth-child(3) {
+            animation-delay: 1.1s;
+        }
     </style>
 </head>
 
@@ -94,8 +122,9 @@
                         <a href="#header" class="hover:opacity-90 transition-opacity">გიორგი ასანიძე</a>
                     </h1>
                     <p class="text-xs sm:text-sm text-slate-400 flex items-center gap-2 mt-0.5 whitespace-nowrap">
-                        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
-                        Full-Stack ვებ-დეველოპერი / პროგრამისტი
+                        <span
+                            class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
+                        Software Engineer
                     </p>
                 </div>
 
@@ -236,13 +265,16 @@
                             <a href="projects/index.html"
                                 class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-medium shadow-lg shadow-brand-600/30 transition-all hover:scale-[1.02]">
                                 <!-- animated inline SVG (work-tree) -->
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 430 431" fill="none" class="flex-shrink-0">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 430 431" fill="none" class="flex-shrink-0">
                                     <!-- branch lines -->
-                                    <path class="wt-line" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="28" d="M171.729 323.98V107.01m0 173.62 85.17-39.73a37.06 37.06 0 0 0 21.39-33.58v-41.49"/>
+                                    <path class="wt-line" stroke="#ffffff" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="28"
+                                        d="M171.729 323.98V107.01m0 173.62 85.17-39.73a37.06 37.06 0 0 0 21.39-33.58v-41.49" />
                                     <!-- commit nodes -->
-                                    <circle class="wt-node" cx="278.29" cy="139.97" r="25.87" fill="#ffffff"/>
-                                    <circle class="wt-node" cx="171.729" cy="81.15" r="25.87" fill="#ffffff"/>
-                                    <circle class="wt-node" cx="171.729" cy="349.85" r="25.87" fill="#ffffff"/>
+                                    <circle class="wt-node" cx="278.29" cy="139.97" r="25.87" fill="#ffffff" />
+                                    <circle class="wt-node" cx="171.729" cy="81.15" r="25.87" fill="#ffffff" />
+                                    <circle class="wt-node" cx="171.729" cy="349.85" r="25.87" fill="#ffffff" />
                                 </svg>
                                 <span>პროექტების ნახვა</span>
                             </a>
